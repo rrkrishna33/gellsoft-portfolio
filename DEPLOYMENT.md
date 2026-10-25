@@ -17,7 +17,9 @@ Publish these files together using your existing GitHub/VPS deployment workflow:
 
 Keep the same relative paths and filename casing on the VPS. The existing Caddy
 static-file configuration can continue serving the site without routing changes.
-After deployment, hard-refresh the browser to replace cached CSS and JavaScript.
+`index.html` loads `css/style.css?v=N` and `js/main.js?v=N`. Whenever you change
+the CSS or JavaScript, increase `N` in both links so browsers fetch the new files
+instead of serving a stale cached copy alongside the new HTML.
 
 The redesign does not commit, push, or deploy files automatically.
 
