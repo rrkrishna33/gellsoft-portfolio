@@ -205,9 +205,15 @@ Other motion: hero content enters over 0.8 seconds from a 15px offset. `.reveal`
 
 | Channel | Destination |
 | --- | --- |
-| Email | `rrkrishna33@gmail.com` |
+| Email (enquiries) | `info@gellsoft.com` |
+| Email (support) | `support@gellsoft.com` |
 | Telephone | `+91 88254 20422` via `tel:+918825420422` |
 | WhatsApp | `https://wa.me/918825420422` |
+
+Offices (shown in the contact section and footer):
+
+- Main office: 148, Valluvar Colony, Old Natham Road, Madurai - 625017, Tamil Nadu, India
+- Branch office: 4/544 A, Tirupati Nagar, S.N. Puram Road, Sivakasi - 626123, Tamil Nadu, India
 
 ### Enquiry Form
 
@@ -219,7 +225,9 @@ Other motion: hero content enters over 0.8 seconds from a 15px offset. `.reveal`
 | Service | Has a default selection | Defaults to `Not sure yet` |
 | Message | Yes | Maximum 3000 characters |
 
-Service links preselect the form using their `data-service` attribute. Its value must exactly match an option value: `Web Development`, `Windows Desktop Application`, `Billing Software`, or `Android App Development`.
+Service links preselect the form using their `data-service` attribute. Its value must exactly match an option value: `Web Development`, `Windows Desktop Application`, `Billing Software`, or `Android App Development`. The form also offers `Support`.
+
+The form addresses drafts to `info@gellsoft.com`, except when `Support` is selected, which addresses them to `support@gellsoft.com` with the subject `Support request` (see `recipientFor()` in `js/main.js`).
 
 `buildEnquiryUrl()` builds a `mailto:` URL with an encoded subject (`New enquiry: {service}`) and body containing all fields. Submit opens the visitor's email handler; the visitor still needs to send the message. The live status text is not a delivery confirmation.
 

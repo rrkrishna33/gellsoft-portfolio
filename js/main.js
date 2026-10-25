@@ -52,18 +52,35 @@ window.addEventListener("scroll", updateScrollState, { passive: true });
 const form = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
 
+const INFO_EMAIL = "info@gellsoft.com";
+const SUPPORT_EMAIL = "support@gellsoft.com";
+
+function recipientFor(service) {
+  return service === "Support" ? SUPPORT_EMAIL : INFO_EMAIL;
+}
+
+const serviceSelect = form.elements.namedItem("service");
+
+function updateFormNote() {
+  formNote.textContent = `Send via your email app to ${recipientFor(serviceSelect.value)}.`;
+}
+
+serviceSelect.addEventListener("change", updateFormNote);
+
 document.querySelectorAll("[data-service]").forEach((link) => {
   link.addEventListener("click", () => {
-    form.elements.namedItem("service").value = link.dataset.service;
+    serviceSelect.value = link.dataset.service;
+    updateFormNote();
   });
 });
 
 function buildEnquiryUrl(data) {
-  const subject = encodeURIComponent(`New enquiry: ${data.get("service")}`);
+  const isSupport = data.get("service") === "Support";
+  const subject = encodeURIComponent(isSupport ? "Support request" : `New enquiry: ${data.get("service")}`);
   const body = encodeURIComponent(
     `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nService: ${data.get("service")}\n\n${data.get("message")}`
   );
-  return `mailto:rrkrishna33@gmail.com?subject=${subject}&body=${body}`;
+  return `mailto:${recipientFor(data.get("service"))}?subject=${subject}&body=${body}`;
 }
 
 form.addEventListener("submit", (event) => {

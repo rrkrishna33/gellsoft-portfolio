@@ -24,7 +24,7 @@ The redesign does not commit, push, or deploy files automatically.
 ## Contact Form
 
 The form prepares a draft in the visitor's email application addressed to
-`rrkrishna33@gmail.com`. It does not send messages through a backend. Phone and
+`info@gellsoft.com` (or `support@gellsoft.com` when the visitor picks the support option). It does not send messages through a backend. Phone and
 WhatsApp links remain available for visitors without a configured email client.
 
 ## Assets and Dependencies
