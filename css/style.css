@@ -305,3 +305,44 @@ ul { margin: 0; padding: 0; list-style: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal.is-pending { opacity: 1; transform: none; }
 }
+
+/* ---- Legal pages (privacy policies) ---- */
+.legal { padding-block: 72px 96px; }
+.legal-wrap { width: min(820px, calc(100% - 96px)); margin-inline: auto; }
+.legal h1 { font-size: 52px; line-height: 1.1; margin: 16px 0 12px; }
+.legal-meta { font-size: 14px; }
+.legal-summary { margin: 32px 0 8px; padding: 24px 28px; background: var(--soft); border-left: 4px solid var(--green); }
+.legal-summary h2 { font-size: 20px; margin: 0 0 10px; }
+.legal-summary p { color: var(--ink); margin-bottom: 10px; }
+.legal-summary p:last-child { margin-bottom: 0; }
+.legal h2 { font-size: 28px; line-height: 1.25; margin: 48px 0 12px; }
+.legal p { margin-bottom: 14px; }
+.legal ul { margin: 0 0 16px; padding-left: 22px; list-style: disc; }
+.legal li { margin-bottom: 8px; color: var(--muted); }
+.legal strong { color: var(--ink); font-weight: 600; }
+.legal a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.legal-table-wrap { margin: 16px 0 20px; overflow-x: auto; }
+.legal-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.legal-table thead th { background: var(--soft); color: var(--ink); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.legal-table tbody th { width: 30%; color: var(--ink); font-weight: 600; }
+.legal-table td { color: var(--muted); }
+.legal-home { margin-left: auto; padding: 12px 0; font-size: 13px; font-weight: 600; }
+.legal-home:hover { color: var(--green); }
+@media (max-width: 820px) {
+  .legal { padding-block: 56px 72px; }
+  .legal-wrap { width: calc(100% - 64px); }
+  .legal h1 { font-size: 40px; }
+  .legal h2 { font-size: 24px; margin-top: 40px; }
+}
+@media (max-width: 560px) {
+  .legal { padding-block: 36px 56px; }
+  .legal-wrap { width: calc(100% - 40px); }
+  .legal h1 { font-size: 32px; }
+  .legal h2 { font-size: 22px; }
+  .legal-summary { padding: 18px 20px; }
+  .legal-table th, .legal-table td { display: block; width: 100%; padding: 4px 0; border: 0; }
+  .legal-table thead { display: none; }
+  .legal-table tbody tr { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .legal-table tbody th { width: 100%; }
+}

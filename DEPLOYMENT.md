@@ -14,6 +14,8 @@ Publish these files together using your existing GitHub/VPS deployment workflow:
 - `css/style.css`
 - `js/main.js`
 - `Gellsoft_logo.jpeg`
+- `privacy/billpro/index.html` (the GellSoft BillPro Android app's privacy policy,
+  served at `/privacy/billpro/`; this is the URL entered in Google Play Console)
 
 Keep the same relative paths and filename casing on the VPS. The existing Caddy
 static-file configuration can continue serving the site without routing changes.
