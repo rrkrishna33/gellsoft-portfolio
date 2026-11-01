@@ -321,6 +321,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .legal li { margin-bottom: 8px; color: var(--muted); }
 .legal strong { color: var(--ink); font-weight: 600; }
 .legal a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.legal-steps { margin: 0 0 14px; padding-left: 22px; }
+.legal-steps li { margin-bottom: 10px; color: var(--ink); padding-left: 4px; }
 .legal-table-wrap { margin: 16px 0 20px; overflow-x: auto; }
 .legal-table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
