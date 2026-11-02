@@ -16,8 +16,11 @@ Publish these files together using your existing GitHub/VPS deployment workflow:
 - `Gellsoft_logo.jpeg`
 - `privacy/billpro/index.html` (the GellSoft BillPro Android app's privacy policy,
   served at `/privacy/billpro/`; this is the URL entered in Google Play Console)
-- `privacy/billpro/delete-data/index.html` (how to delete data; the "Delete data URL"
-  entered in the Play Console Data safety form)
+- `privacy/billpro/delete-data/index.html` (how to delete data and the account; the
+  "Delete data URL" entered in the Play Console Data safety form)
+- `billpro/index.html` (the GellSoft BillPro app home page, served at `/billpro/`; used as
+  the app home page on the Google OAuth consent screen)
+- `terms/billpro/index.html` (the app's terms of service, served at `/terms/billpro/`)
 
 Keep the same relative paths and filename casing on the VPS. The existing Caddy
 static-file configuration can continue serving the site without routing changes.
