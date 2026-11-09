@@ -21,6 +21,10 @@ Publish these files together using your existing GitHub/VPS deployment workflow:
 - `billpro/index.html` (the GellSoft BillPro app home page, served at `/billpro/`; used as
   the app home page on the Google OAuth consent screen)
 - `terms/billpro/index.html` (the app's terms of service, served at `/terms/billpro/`)
+- `rentpro/index.html`, `privacy/rentpro/index.html`, `privacy/rentpro/delete-data/index.html` and
+  `terms/rentpro/index.html` (the same four pages for the GellSoft RentPro app: home page, privacy policy,
+  "delete your data" page and terms of service, served at `/rentpro/`, `/privacy/rentpro/`,
+  `/privacy/rentpro/delete-data/` and `/terms/rentpro/`)
 
 Keep the same relative paths and filename casing on the VPS. The existing Caddy
 static-file configuration can continue serving the site without routing changes.
